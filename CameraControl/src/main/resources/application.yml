@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cameraControl
+
+  kafka:
+    auto-offset-reset: latest
+    bootstrap-servers: localhost:9092
+    group-id: consumer-group-camera
+    consumer:
+      target: TargetBearingPosition
+      tower: TowerPosition
+    producer:
+      CameraLosStatus: CameraLosStatus
+
+server:
+  port: 9696
